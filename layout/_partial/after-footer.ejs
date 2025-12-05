@@ -12,7 +12,29 @@
 		innerArchive: <%=theme.smart_menu.innerArchive ? true : false%>,
 		showTags: <%=(theme.slider && theme.slider.showTags) ? true : false%>
 	}
+
 </script>
+
+<% if (theme.mermaid && theme.mermaid.enable) { %>
+  <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({
+        theme: 'forest',
+        startOnLoad: true,
+        securityLevel: 'loose',
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true
+        },
+        xyChart: {
+          width: 800,
+          height: 400
+        }
+      });
+    }
+  </script>
+<% } %>
 
 <%- partial('script') %>
 

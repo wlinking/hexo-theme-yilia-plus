@@ -264,3 +264,10 @@ friends:
 
 # 关于我
 aboutme: 主要涉及技术：<br>Java后端开发、<br>开源爱好者、<br>Linux<br>
+
+# Mermaid图表支持
+mermaid:
+  enable: true
+  version: "10.6.1"
+  options:
+    startOnload: true
